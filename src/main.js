@@ -7,14 +7,12 @@ const fs = require('fs');
  * @param {*} config
  * @returns 
  */
-module.exports = function (name , path) {
+module.exports = function (adapter) {
     // 创建一个给定context上下文对象的原始的 lodash 函数
     const _ = lodash.runInContext()
     // 创建包装实例
     const db = _.chain({})
-
     const dbPool = [];
-
     const plant = (state) => {
         db.__wrapped__ = state
         return db
