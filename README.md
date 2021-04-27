@@ -1,2 +1,2 @@
 # jsondb
-json database by js
+# Small JSON database for Node
